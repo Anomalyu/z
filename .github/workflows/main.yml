@@ -18,7 +18,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..3}; do
-            sudo timeout 30 ./killed GET https://hexbear.xyz/ fres.txt 30 900 6 &
+            sudo timeout 10 ./killed GET https://hexbear.xyz/ fres.txt 10 900 6 &
             PIDS+=($!)
           done
           
@@ -27,7 +27,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 30
+        run: sleep 10
         
       - name: OK !
         run: sudo reboot
