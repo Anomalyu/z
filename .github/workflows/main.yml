@@ -1,4 +1,4 @@
-name: Ubuntu VDS 20 saniye
+name: Ubuntu VDS 20 saniye tek poraz
 
 on:
   workflow_dispatch:
