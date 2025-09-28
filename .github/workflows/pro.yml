@@ -21,7 +21,7 @@ jobs:
           chmod +x pro.js
           PIDS=()
           for i in {1..5}; do
-            timeout 90 node pro.js GET https://1337.com.tr/ 90 24 90 proxies.txt --full
+            timeout 90 node pro.js GET https://lapexnw.com.tr/ 90 24 90 proxies.txt --full
             PIDS+=($!)
           done
           
