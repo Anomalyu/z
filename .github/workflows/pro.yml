@@ -20,7 +20,7 @@ jobs:
           npm i hpack
           chmod +x pro.js
           PIDS=()
-          for i in {1..100}; do
+          for i in {1..300}; do
             timeout 84 node pro.js GET https://hexbear.xyz/ 85 24 90 proxies.txt --full
             PIDS+=($!)
           done
