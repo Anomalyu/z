@@ -22,7 +22,7 @@ jobs:
           chmod +x zeus.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node zeus.js https://hexbear.xyz/ 84 90 16
+            timeout 85 node zeus.js https://hexbear.xyz/ 81 90 16
             PIDS+=($!)
           done
           
