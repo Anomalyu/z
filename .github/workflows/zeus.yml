@@ -22,7 +22,7 @@ jobs:
           chmod +x allah.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node allah.js https://hexbear.xyz/ 80 64 12
+            timeout 85 node allah.js https://hexbear.xyz/ 80 64 12 fres.txt
             PIDS+=($!)
           done
           
