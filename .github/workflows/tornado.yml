@@ -23,13 +23,13 @@ jobs:
             timeout 75 node tornado.js GET https://l7waf.com/ 70 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
-          
+
           for pid in "${PIDS[@]}"; do
             wait $pid
           done
 
       - name: OK !
         run: sleep 75
-        
+
       - name: OK !
         run: sudo reboot
