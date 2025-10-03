@@ -1,4 +1,4 @@
-  name: Ubuntu VDS 50 saniye tornada
+  name: Ubuntu VDS 50 saniye t
 
 on:
   workflow_dispatch:
