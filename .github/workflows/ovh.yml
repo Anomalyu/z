@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: vds
-    timeout-minutes: 60
+    timeout-minutes: 2
     strategy:
       max-parallel: 30
       matrix:
