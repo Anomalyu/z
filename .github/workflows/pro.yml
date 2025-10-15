@@ -22,7 +22,7 @@ jobs:
           npm i axios 
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node xxx.js https://graph.vshield.pro/ 100 90 8
+            timeout 105 node xxx.js https://hexbear.xyz/ 100 90 8
             PIDS+=($!)
           done
           
